@@ -9,8 +9,7 @@ document.body.appendChild( renderer.domElement );
 
 const loader = new GLTFLoader();
 //cat
-loader.load(
-    '/assets/Parrot.glb', function ( gltf ) {
+loader.load('../assets/Parrot.glb', function ( gltf ) {
         scene.add( gltf.scene );
     }, undefined, function ( error ) {
         console.error( error );
