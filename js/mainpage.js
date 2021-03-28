@@ -9,7 +9,7 @@ document.body.appendChild( renderer.domElement );
 
 const loader = new GLTFLoader();
 //cat
-loader.load( 'assets/cat.glb', function ( gltf ) {
+loader.load( 'assets/Parrot.glb', function ( gltf ) {
     scene.add( gltf.scene );
 }, undefined, function ( error ) {
     console.error( error );
@@ -24,7 +24,7 @@ loader.load( 'assets/cat.glb', function ( gltf ) {
 camera.position.z = 5;
 
 const animate = function () {
-    requestAnimationFrame( animate );
+    // requestAnimationFrame( animate );
 
     // cube.rotation.x += 0.01;
     // scene.rotation.y += 0.01;
