@@ -7,13 +7,17 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
+//cat loader
 const loader = new GLTFLoader();
-//cat
 loader.load( 'assets/Parrot.glb', function ( gltf ) {
         scene.add( gltf.scene );
     }, undefined, function ( error ) {
         console.error( error );
 } );
+
+//light 
+var light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+scene.add( light );
 
 //cube
 // const geometry = new THREE.BoxGeometry();
