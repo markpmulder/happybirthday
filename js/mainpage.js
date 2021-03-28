@@ -27,7 +27,7 @@ const animate = function () {
     requestAnimationFrame( animate );
 
     // cube.rotation.x += 0.01;
-    scene.rotation.y += 0.01;
+    // scene.rotation.y += 0.01;
 
     renderer.render( scene, camera );
 };
