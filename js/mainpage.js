@@ -16,7 +16,18 @@ document.body.appendChild( renderer.domElement );
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+//scene.add( cube );
+
+//cat loader
+const loader = new GLTFLoader();
+loader.load( 'assets/cat.glb', function ( gltf ) {
+        scene.add( gltf.scene );
+    }, undefined, function ( error ) {
+        console.error( error );
+} );
+
+
+
 
 camera.position.z = 5;
 
