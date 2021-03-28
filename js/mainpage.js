@@ -16,10 +16,10 @@ loader.load( 'assets/cat.glb', function ( gltf ) {
 } );
 
 //cube
-// const geometry = new THREE.BoxGeometry();
-// const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-// const cube = new THREE.Mesh( geometry, material );
-// scene.add( cube );
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
 
 camera.position.z = 5;
 
@@ -27,7 +27,7 @@ const animate = function () {
     requestAnimationFrame( animate );
 
     // cube.rotation.x += 0.01;
-    gltf.scene.rotation.y += 0.01;
+    scene.rotation.y += 0.01;
 
     renderer.render( scene, camera );
 };
