@@ -22,7 +22,7 @@ document.body.appendChild(canvas);
 
 const loader = new GLTFLoader();
 loader.load( 'assets/newcat.glb', function ( gltf ) {
-    catmodel = gltf.scene
+    const catmodel = gltf.scene
 	scene.add( catmodel );
 }, undefined, function ( error ) {
 	console.error( error );
