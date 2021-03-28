@@ -15,18 +15,18 @@ renderer.setClearColor(0x808080);
 var canvas = renderer.domElement
 document.body.appendChild(canvas);
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+// const geometry = new THREE.BoxGeometry();
+// const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+// const cube = new THREE.Mesh( geometry, material );
+// scene.add( cube );
 
-// // cat loader
-// const loader = new GLTFLoader();
-// loader.load( 'assets/cat.glb', function ( gltf ) {
-//         scene.add( gltf.scene );
-//     }, undefined, function ( error ) {
-//         console.error( error );
-// } );
+const loader = new GLTFLoader();
+loader.load( 'assets/cat.glb', function ( gltf ) {
+	scene.add( gltf.scene );
+}, undefined, function ( error ) {
+	console.error( error );
+} );
+
 
 camera.position.z = 5;
 
