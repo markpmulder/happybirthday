@@ -17,6 +17,7 @@ const loader = new GLTFLoader();
 loader.load( 'assets/newcat.glb', function ( gltf ) {
     catmodel = gltf.scene
 	scene.add( catmodel );
+    animate();
 }, undefined, function ( error ) {
 	console.error( error );
 } );
@@ -29,13 +30,6 @@ camera.position.z = 5;
 
 const animate = function () {
     requestAnimationFrame( animate );
-    catmodel.rotation.y += 0.01;
+    catmodel.rotation.y += 0.02;
     renderer.render( scene, camera );
 };
-
-function play() {
-    var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
-    audio.play();
-  }
-  play();
-animate();
