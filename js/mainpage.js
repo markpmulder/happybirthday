@@ -31,10 +31,7 @@ camera.position.z = 5;
 
 const animate = function () {
     requestAnimationFrame( animate );
-
-    catmodel.rotation.x += 0.01;
-    //catmodel.rotation.y += 0.01;
-
+    catmodel.rotation.y += 0.01;
     renderer.render( scene, camera );
 };
 
