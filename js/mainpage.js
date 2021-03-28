@@ -21,7 +21,7 @@ document.body.appendChild(canvas);
 // scene.add( cube );
 
 const loader = new GLTFLoader();
-loader.load( 'assets/cat.glb', function ( gltf ) {
+loader.load( 'assets/newcat.glb', function ( gltf ) {
 	scene.add( gltf.scene );
 }, undefined, function ( error ) {
 	console.error( error );
