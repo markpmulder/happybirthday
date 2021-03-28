@@ -22,7 +22,8 @@ document.body.appendChild(canvas);
 
 const loader = new GLTFLoader();
 loader.load( 'assets/newcat.glb', function ( gltf ) {
-	scene.add( gltf.scene );
+    catmodel = gltf.scene
+	scene.add( catmodel );
 }, undefined, function ( error ) {
 	console.error( error );
 } );
@@ -36,8 +37,8 @@ camera.position.z = 5;
 const animate = function () {
     requestAnimationFrame( animate );
 
-    // cube.rotation.x += 0.01;
-    // cube.rotation.y += 0.01;
+    catmodel.rotation.x += 0.01;
+    catmodel.rotation.y += 0.01;
 
     renderer.render( scene, camera );
 };
